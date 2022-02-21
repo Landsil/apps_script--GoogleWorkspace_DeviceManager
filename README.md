@@ -1,7 +1,7 @@
 # apps_script--GoogleWorkspace_DeviceManager
 Device manager for Google Workspace in Apps Script.
 
-
+TODO: clean this so it's readable in markdown
 
 /***
 -----------------------------------
