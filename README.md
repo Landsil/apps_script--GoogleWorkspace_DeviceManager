@@ -1,7 +1,11 @@
-# apps_script--GoogleWorkspace_DeviceManager
-Device manager for Google Workspace in Apps Script.
-
 TODO: clean this so it's readable in markdown
+
+## Current state
+
+Only pulling devices down from google works, look to issues for new features in progress.
+
+
+# Manual
 
 /***
 -----------------------------------
