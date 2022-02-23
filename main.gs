@@ -5,10 +5,18 @@ function onOpen()
   var entries = 
   [
     {
-    name : 'Pull Devices',
-    functionName : 'downloadDevices'
+    name : 'Pull Google Devices',
+    functionName : 'downloadGoogleDevices'
   },
 
+  {
+    name : 'Clean data',
+    functionName : 'run_main_data'
+  },
+  {
+    name : 'Make Sheets',
+    functionName : 'make_sheets'
+  },
 ];
   sheet.addMenu('Script', entries);
 }
