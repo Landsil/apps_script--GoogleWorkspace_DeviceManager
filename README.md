@@ -44,9 +44,9 @@ private_key - when sacing this one copy whole things includng brackets on both e
 https://console.cloud.google.com/iam-admin/serviceaccounts?authuser=2&project=sys-81042813652660706723595377
 
 ## This probably isn't needed anymore
--------------------------------------------------
+
 ----------  Redirect URI (in your GCP) ----------
--------------------------------------------------
+
 1. 
 Go to your org's GCP and find this script.
 Assuming you have required access you can see all resources here: https://console.cloud.google.com/cloud-resource-manager
