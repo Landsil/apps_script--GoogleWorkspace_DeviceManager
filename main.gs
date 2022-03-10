@@ -8,10 +8,13 @@ function onOpen()
     name : 'Pull Google Devices',
     functionName : 'downloadGoogleDevices'
   },
-
   {
     name : 'Clean data',
-    functionName : 'run_main_data'
+    functionName : 'run_main_mover'
+  },
+    {
+    name : 'Push to Google',
+    functionName : 'createGoogleDevices_Go'
   },
   {
     name : 'Make Sheets',
@@ -34,4 +37,7 @@ function onOpen()
 var scriptProperties = PropertiesService.getScriptProperties()
     private_key= scriptProperties.getProperty('private_key').replace(/\\n/g, '\n')  // Key you get in JSON is JSON encoded, with this you won't have to clean it.
     client_email = scriptProperties.getProperty("client_email")
+    mosyleToken = scriptProperties.getProperty("mosyleToken")
+    mosyleUser = scriptProperties.getProperty("mosyleUser")     // Mosyle email
+    mosylePass = scriptProperties.getProperty("mosylePass")     // Mosyle password
     ;
