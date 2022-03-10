@@ -1,6 +1,5 @@
 /****************
 This script is responsible for creating the empty pages for code to put data into.
-You will probably want to update deviceCreateGoogle_A to fit your particular source of truth.
 Please make sure to keep content of the columns the same or you will have to re-do column calls in contentMover.gs 
 
 */
@@ -22,15 +21,13 @@ try{
 
   devicePullGoogle_A.getRange("A1").setValue('S/N');
   devicePullGoogle_A.getRange("B1").setValue('assetTag');
-  devicePullGoogle_A.getRange("C1").setValue('ownerType');
-  devicePullGoogle_A.getRange("D1").setValue('deviceType');
+  devicePullGoogle_A.getRange("C1").setValue('deviceType');
+  devicePullGoogle_A.getRange("D1").setValue('ownerType');
   devicePullGoogle_A.getRange("E1").setValue('manufacturer');
   devicePullGoogle_A.getRange("F1").setValue('model');
   devicePullGoogle_A.getRange("G1").setValue('osVersion');
   devicePullGoogle_A.getRange("H1").setValue('encryptionState');
   devicePullGoogle_A.getRange("I1").setValue('lastSyncTime');
-  // devicePullGoogle_A.getRange("L1").setValue('aliases');
-  devicePullGoogle_A.getRange("E1").setValue('Force_Sync');
   
 try{
   var deviceCreateGoogle_A = spreadsheet.getSheetByName("deviceCreateGoogle_A");
@@ -45,6 +42,7 @@ try{
 
   deviceCreateGoogle_A.getRange("A1").setValue('S/N');
   deviceCreateGoogle_A.getRange("B1").setValue('assetTag');
+  deviceCreateGoogle_A.getRange("C1").setValue('deviceType');
 
 
 try{
@@ -60,8 +58,26 @@ try{
 
   manual_import.getRange("A1").setValue('S/N');
   manual_import.getRange("B1").setValue('assetTag');
+  manual_import.getRange("C1").setValue('deviceType');
 
 
+  try{
+  var devicePullMosyle_A = spreadsheet.getSheetByName("devicePullMosyle_A");
+  } catch(err) {
+    spreadsheet.insertSheet().setName("devicePullMosyle_A");
+  }
+  var devicePullMosyle_A = spreadsheet.getSheetByName("devicePullMosyle_A");
+  devicePullMosyle_A.setFrozenRows(1) // header
+  devicePullMosyle_A.getRange("1:1").activate();
+  devicePullMosyle_A.getActiveRangeList().setHorizontalAlignment("center").setFontWeight("bold"); // center and bold
+  devicePullMosyle_A.getRange("1:999").setWrapStrategy(SpreadsheetApp.WrapStrategy.CLIP);  // Clip when text to long
+
+  devicePullMosyle_A.getRange("A1").setValue('S/N');
+  devicePullMosyle_A.getRange("B1").setValue('asset_tag');
+  devicePullMosyle_A.getRange("C1").setValue('device_model');
+  devicePullMosyle_A.getRange("D1").setValue('device_name');
+  devicePullMosyle_A.getRange("E1").setValue('userid');
+  devicePullMosyle_A.getRange("G1").setValue('Force_Sync');
 
   SpreadsheetApp.flush();
 }
