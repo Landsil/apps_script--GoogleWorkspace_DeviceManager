@@ -28,7 +28,7 @@ function downloadGoogleDevices() {
     var index = 0;
 
     do {
-      var querry = `?pageSize=100&pageToken=${pageToken}`  // view=COMPANY_INVENTORY&
+      var querry = `?pageSize=100&filter=owner:COMPANY&pageToken=${pageToken}`  // &view=COMPANY_INVENTORY
       var URL = `https://cloudidentity.googleapis.com/v1/devices` + querry;
       var headers = {
         Authorization: 'Bearer ' + service.getAccessToken()
@@ -48,8 +48,8 @@ function downloadGoogleDevices() {
 
           devicePullGoogle_A.getRange(index + lastRow + i, 1).setValue(data[i]["serialNumber"]);
           devicePullGoogle_A.getRange(index + lastRow + i, 2).setValue(data[i]["assetTag"]);
-          devicePullGoogle_A.getRange(index + lastRow + i, 3).setValue(data[i]["ownerType"]);
-          devicePullGoogle_A.getRange(index + lastRow + i, 4).setValue(data[i]["deviceType"]);
+          devicePullGoogle_A.getRange(index + lastRow + i, 3).setValue(data[i]["deviceType"]);
+          devicePullGoogle_A.getRange(index + lastRow + i, 4).setValue(data[i]["ownerType"]);
           devicePullGoogle_A.getRange(index + lastRow + i, 5).setValue(data[i]["manufacturer"]);
           devicePullGoogle_A.getRange(index + lastRow + i, 6).setValue(data[i]["model"]);
           devicePullGoogle_A.getRange(index + lastRow + i, 7).setValue(data[i]["osVersion"]);
