@@ -41,3 +41,12 @@ var scriptProperties = PropertiesService.getScriptProperties()
     mosyleUser = scriptProperties.getProperty("mosyleUser")     // Mosyle email
     mosylePass = scriptProperties.getProperty("mosylePass")     // Mosyle password
     ;
+
+
+/** This is what you use to run full automation via triggers. */
+function run_everything() {
+  downloadGoogleDevices();
+  downloadMosyleDevices();
+  run_main_mover();  //  Clean, compare and assamble data
+  createGoogleDevices();
+};
