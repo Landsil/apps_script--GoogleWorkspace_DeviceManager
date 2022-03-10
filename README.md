@@ -2,7 +2,7 @@ TODO: clean this so it's readable in markdown
 
 ## Current state
 
-Only pulling devices down from google works, look to issues for new features in progress.
+Everything works as intended.
 
 
 # Manual
