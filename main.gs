@@ -40,8 +40,9 @@ var scriptProperties = PropertiesService.getScriptProperties()
     mosyleToken = scriptProperties.getProperty("mosyleToken")
     mosyleUser = scriptProperties.getProperty("mosyleUser")     // Mosyle email
     mosylePass = scriptProperties.getProperty("mosylePass")     // Mosyle password
+    snipeIT_domain = scriptProperties.getProperty("snipeIT_domain")   //  Domain of your instance, everything before /api/v1....
+    snipeIT_token = scriptProperties.getProperty("snipeIT_token")    // Your API token
     ;
-
 
 /** This is what you use to run full automation via triggers. */
 function run_everything() {
