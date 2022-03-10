@@ -1,24 +1,13 @@
 TODO: clean this so it's readable in markdown
 
-## Current state
-
-Everything works as intended.
-
-
 # Manual
-
-/***
------------------------------------
----------- Initial setup ----------
------------------------------------
+## Initial setup
 ( I will assume here you are using new interface version "v8 / 2021")
 1. Make a spreadsheet with a desired name, keep same name for script.
-2. Add bunch of sheets as script has hardcoded names, sheet name should be on top of every .gs file, for now 1 is enough.
-3. Copy all of the files from this repo as their own files in appscript, save everything.
+2. Copy all of the files from this repo as their own files in appscript, save everything.
+3. Run code from templates.gs It will make all spreadsheets for you.
 
------------------------------------------------------
----------- "Copy" from github instructions ----------
------------------------------------------------------
+## OAuth
 1.
 We will need proper working OAuth from https://github.com/googleworkspace/apps-script-oauth2
 Click "+" next to "Libraries" and search for script ID "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF"
@@ -27,9 +16,7 @@ Click "+" next to "Libraries" and search for script ID "1B7FSrk5Zi6L1rSxxTDgDEUs
 Grab your Redirect URI that will be: https://script.google.com/macros/d/{SCRIPT ID}/usercallback
 It will be in settings, you will need that later.
 
--------------------------------------------------
-------------  API and Service account -----------
--------------------------------------------------
+### API and Service account
 We will follow instructions from: https://cloud.google.com/identity/docs/how-to/setup-devices
 
 1. 
@@ -56,6 +43,7 @@ private_key - when sacing this one copy whole things includng brackets on both e
 
 https://console.cloud.google.com/iam-admin/serviceaccounts?authuser=2&project=sys-81042813652660706723595377
 
+## This probably isn't needed anymore
 -------------------------------------------------
 ----------  Redirect URI (in your GCP) ----------
 -------------------------------------------------
@@ -87,15 +75,9 @@ Copy client ID and Client Secret or download all as JSON.
 You will have to decide how to store/access those. For this code we will use "scriptProperties", please refer to "main.gs".
 
 
------------------------------
-----------  Usage  ----------
------------------------------
+# Usage
 
 Google sheet shoudl have a new menu on top called "Script"
-All options in it shoudl be self descriptive
+All options in it shoudl be self descriptive.
 
-
-
-
-
- */
+TODO: add more info here
