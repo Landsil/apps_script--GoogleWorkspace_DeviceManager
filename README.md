@@ -16,7 +16,7 @@ Click "+" next to "Libraries" and search for script ID "1B7FSrk5Zi6L1rSxxTDgDEUs
 Grab your Redirect URI that will be: https://script.google.com/macros/d/{SCRIPT ID}/usercallback
 It will be in settings, you will need that later.
 
-### API and Service account
+## API and Service account
 We will follow instructions from: https://cloud.google.com/identity/docs/how-to/setup-devices
 
 1. 
