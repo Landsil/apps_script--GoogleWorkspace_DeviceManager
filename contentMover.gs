@@ -168,5 +168,6 @@ function run_main_mover() {
   var mosyle = load_Mosyle();
   var newArrayManual = make_newArrayFromManual(sourceManual, current);
   var newArrayMosyle = make_newArrayFromMosyle(mosyle, current);
+  
   save_source(newArrayManual, newArrayMosyle);
 };
