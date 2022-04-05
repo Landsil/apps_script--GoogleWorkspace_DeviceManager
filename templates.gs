@@ -8,9 +8,9 @@ Please make sure to keep content of the columns the same or you will have to re-
 function make_sheets() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
 
-try{
-  var devicePullGoogle_A = spreadsheet.getSheetByName("devicePullGoogle_A");
-  } catch(err) {
+  try {
+    var devicePullGoogle_A = spreadsheet.getSheetByName("devicePullGoogle_A");
+  } catch (err) {
     spreadsheet.insertSheet().setName("devicePullGoogle_A");
   }
   var devicePullGoogle_A = spreadsheet.getSheetByName("devicePullGoogle_A");
@@ -28,10 +28,10 @@ try{
   devicePullGoogle_A.getRange("G1").setValue('osVersion');
   devicePullGoogle_A.getRange("H1").setValue('encryptionState');
   devicePullGoogle_A.getRange("I1").setValue('lastSyncTime');
-  
-try{
-  var deviceCreateGoogle_A = spreadsheet.getSheetByName("deviceCreateGoogle_A");
-  } catch(err) {
+
+  try {
+    var deviceCreateGoogle_A = spreadsheet.getSheetByName("deviceCreateGoogle_A");
+  } catch (err) {
     spreadsheet.insertSheet().setName("deviceCreateGoogle_A");
   }
   var deviceCreateGoogle_A = spreadsheet.getSheetByName("deviceCreateGoogle_A");
@@ -45,9 +45,9 @@ try{
   deviceCreateGoogle_A.getRange("C1").setValue('deviceType');
 
 
-try{
-  var manual_import = spreadsheet.getSheetByName("manual_import");
-  } catch(err) {
+  try {
+    var manual_import = spreadsheet.getSheetByName("manual_import");
+  } catch (err) {
     spreadsheet.insertSheet().setName("manual_import");
   }
   var manual_import = spreadsheet.getSheetByName("manual_import");
@@ -61,9 +61,9 @@ try{
   manual_import.getRange("C1").setValue('deviceType');
 
 
-  try{
-  var devicePullMosyle_A = spreadsheet.getSheetByName("devicePullMosyle_A");
-  } catch(err) {
+  try {
+    var devicePullMosyle_A = spreadsheet.getSheetByName("devicePullMosyle_A");
+  } catch (err) {
     spreadsheet.insertSheet().setName("devicePullMosyle_A");
   }
   var devicePullMosyle_A = spreadsheet.getSheetByName("devicePullMosyle_A");
@@ -78,6 +78,28 @@ try{
   devicePullMosyle_A.getRange("D1").setValue('device_name');
   devicePullMosyle_A.getRange("E1").setValue('userid');
   devicePullMosyle_A.getRange("G1").setValue('Force_Sync');
+  
+
+  try {
+    var devicePullSnipeIT_A = spreadsheet.getSheetByName("devicePullSnipeIT_A");
+  } catch (err) {
+    spreadsheet.insertSheet().setName("devicePullSnipeIT_A");
+  }
+  var devicePullSnipeIT_A = spreadsheet.getSheetByName("devicePullSnipeIT_A");
+  devicePullSnipeIT_A.setFrozenRows(1) // header
+  devicePullSnipeIT_A.getRange("1:1").activate();
+  devicePullSnipeIT_A.getActiveRangeList().setHorizontalAlignment("center").setFontWeight("bold"); // center and bold
+  devicePullSnipeIT_A.getRange("1:999").setWrapStrategy(SpreadsheetApp.WrapStrategy.CLIP);  // Clip when text to long
+
+  devicePullSnipeIT_A.getRange("A1").setValue('S/N');
+  devicePullSnipeIT_A.getRange("B1").setValue('asset_tag');
+  devicePullSnipeIT_A.getRange("C1").setValue('model.name');
+  devicePullSnipeIT_A.getRange("D1").setValue('category.name');
+  devicePullSnipeIT_A.getRange("E1").setValue('status.name');
+  devicePullSnipeIT_A.getRange("F1").setValue('status.name');
+  devicePullSnipeIT_A.getRange("G1").setValue('status.name');
+
+  devicePullSnipeIT_A.getRange("I1").setValue('Force_Sync');
 
   SpreadsheetApp.flush();
 }
