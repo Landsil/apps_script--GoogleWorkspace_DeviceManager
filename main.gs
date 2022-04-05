@@ -5,8 +5,8 @@ function onOpen()
   var entries = 
   [
     {
-    name : 'Pull Google Devices',
-    functionName : 'downloadGoogleDevices'
+    name : 'Pull All Devices',
+    functionName : 'downloadAllDevices'
   },
   {
     name : 'Clean data',
@@ -48,6 +48,14 @@ var scriptProperties = PropertiesService.getScriptProperties()
 function run_everything() {
   downloadGoogleDevices();
   downloadMosyleDevices();
+  downloadSnipeITDevices();
   run_main_mover();  //  Clean, compare and assamble data
   createGoogleDevices();
+};
+
+/** This is what you use to run full automation via triggers. */
+function downloadAllDevices() {
+  downloadGoogleDevices();
+  downloadMosyleDevices();
+  downloadSnipeITDevices();
 };
