@@ -60,16 +60,11 @@ function downloadMosyleDevices() {
     // Populate sheet
     if (data) {
       for (var i = 0; i < data.length; i++) {
-
         devicePullMosyle_A.getRange(index + lastRow + i, 1).setValue(data[i]["serial_number"]);
         devicePullMosyle_A.getRange(index + lastRow + i, 2).setValue(data[i]["asset_tag"]);
         devicePullMosyle_A.getRange(index + lastRow + i, 3).setValue(data[i]["device_model"]);
         devicePullMosyle_A.getRange(index + lastRow + i, 4).setValue(data[i]["device_name"]);
-        devicePullMosyle_A.getRange(index + lastRow + i, 5).setValue(data[i]["status"]);
-        devicePullMosyle_A.getRange(index + lastRow + i, 6).setValue(data[i]["is_supervised"]);
-        devicePullMosyle_A.getRange(index + lastRow + i, 7).setValue(data[i]["userid"]);
-        devicePullMosyle_A.getRange(index + lastRow + i, 8).setValue(data[i]["usernam"]);
-
+        devicePullMosyle_A.getRange(index + lastRow + i, 5).setValue(data[i]["userid"]);
       }
     var index = index + page_size  // Has to be same as pageSize
       page++
