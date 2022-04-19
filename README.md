@@ -1,5 +1,3 @@
-TODO: clean this so it's readable in markdown
-
 # Manual
 ## Initial setup
 ( I will assume here you are using new interface version "v8 / 2021")
