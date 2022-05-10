@@ -22,7 +22,7 @@ function createGoogleDevices() {
       dataArray.push(
         {
           "serialNumber": row[0],   // All the values here are based on columns in a sheet A=0, B=1
-          "assetTag": row[1],
+          // "assetTag": row[1],
           "deviceType": row[2],
         }
       );
@@ -52,7 +52,7 @@ function createGoogleDevices_Go(dataArray) {
         for (var i = 0; i < dataArray.length; i++) {
           var update = {
               serialNumber: dataArray[i]['serialNumber'],
-              assetTag: dataArray[i]['assetTag'],
+              // assetTag: dataArray[i]['assetTag'],
               deviceType: dataArray[i]['deviceType'],
         }; 
 
@@ -60,20 +60,19 @@ function createGoogleDevices_Go(dataArray) {
     var URL = `https://cloudidentity.googleapis.com/v1/devices`;
     var headers = {
       Authorization: 'Bearer ' + service.getAccessToken(),
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     };
     var payload = JSON.stringify(update)
     var options = {
       method: "POST",
       headers: headers,
       payload : payload,
-      // muteHttpExceptions: true
+      muteHttpExceptions: true,
     };
 
         // console.log('Data to post')
         // console.log(options)               // This will let you see what you are pushing to double check before first live push.
         var update = UrlFetchApp.fetch(URL, options);  // This will update your org, you have to un-comment it to work.
-        console.log('Responce from Google')
         console.log(update.getContentText());
         }
 
