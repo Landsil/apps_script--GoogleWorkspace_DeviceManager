@@ -28,7 +28,7 @@ function downloadGoogleDevices() {
     var index = 0;
 
     do {
-      var querry = `?pageSize=100&filter=owner:COMPANY&pageToken=${pageToken}`  // &view=COMPANY_INVENTORY
+      var querry = `?pageSize=100&view=COMPANY_INVENTORY&pageToken=${pageToken}`  // &view=COMPANY_INVENTORY
       var URL = `https://cloudidentity.googleapis.com/v1/devices` + querry;
       var headers = {
         Authorization: 'Bearer ' + service.getAccessToken()
