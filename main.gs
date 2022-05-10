@@ -47,15 +47,16 @@ var scriptProperties = PropertiesService.getScriptProperties()
 /** This is what you use to run full automation via triggers. */
 function run_everything() {
   downloadGoogleDevices();
-  downloadMosyleDevices();
+  // downloadMosyleDevices();
   downloadSnipeITDevices();
   run_main_mover();  //  Clean, compare and assamble data
-  createGoogleDevices();
+  var dataArray = createGoogleDevices();
+  createGoogleDevices_Go(dataArray)
 };
 
 /** This is what you use to run full automation via triggers. */
 function downloadAllDevices() {
   downloadGoogleDevices();
-  downloadMosyleDevices();
+  // downloadMosyleDevices();
   downloadSnipeITDevices();
 };
