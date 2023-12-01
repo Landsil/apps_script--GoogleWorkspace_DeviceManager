@@ -29,14 +29,14 @@ You now have a project selected, make sure billing is assigned.
 2.
 Enable Cloud Identity API as per that manual
 Configure service account.
-Save JSON credentails, you will need them in a moment
+Save JSON credentials, you will need them in a moment
 
 3. 
-Out of those credentails you will have to add few to Script Properties please refer to "main.gs"
+Out of those credentials you will have to add few to Script Properties please refer to "main.gs"
 Save with same name:
 client_email
 client_id
-private_key - when sacing this one copy whole things includng brackets on both ends ""
+private_key - when saving this one copy whole things including brackets on both ends ""
 
 
 https://console.cloud.google.com/iam-admin/serviceaccounts?authuser=2&project=sys-81042813652660706723595377
@@ -63,10 +63,10 @@ Ignore Scopes, manifest should take care of that.
 Next > Back to dashboard
 
 3. Get OAuth client ID
-Go to "Credentails" on the left https://console.cloud.google.com/apis/credentials
+Go to "Credentials" on the left https://console.cloud.google.com/apis/credentials
 Click "+ Create Credentials" > "Create OAuth client ID"
-Web Aplication
-Resonable name
+Web Application
+Reasonable name
 Create
 Authorised redirect URIs = https://script.google.com/macros/d/{SCRIPT ID}/usercallback
 Copy client ID and Client Secret or download all as JSON.
@@ -75,7 +75,7 @@ You will have to decide how to store/access those. For this code we will use "sc
 
 # Usage
 
-Google sheet shoudl have a new menu on top called "Script"
-All options in it shoudl be self descriptive.
+Google sheet should have a new menu on top called "Script"
+All options in it should be self descriptive.
 
 TODO: add more info here
